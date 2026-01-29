@@ -1,3 +1,5 @@
+#problem statement:find the count of subarrays with xor k
+
 class Solution:
     def subarrayXor(self, arr, k):
         h={}
@@ -13,3 +15,5 @@ class Solution:
             else:
                 h[prefix]+=1
         return count         
+    
+#pattern : prefix xor + hashmap  #time complexity : O(n)    

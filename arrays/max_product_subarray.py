@@ -1,3 +1,5 @@
+#problem statement:find the maximum product subarray
+
 class Solution:
     def maxProduct(self, nums: List[int]) -> int:
         maxi=1
@@ -9,3 +11,5 @@ class Solution:
             mini=min(n*m,n*mini,n)
             gb=max(gb,maxi)
         return gb
+    
+#pattern : kadane's algorithm variation  #time complexity : O(n)

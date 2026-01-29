@@ -9,3 +9,4 @@ class Solution:
                 return i
             ns+=nums[i]
         return -1        
+#pattern : prefix sum  #time complexity : O(n)

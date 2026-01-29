@@ -1,3 +1,5 @@
+#problem statement:find the minimum size subarray with sum greater than or equal to target
+
 class Solution:
     def minSubArrayLen(self, target: int, nums: List[int]) -> int:
         l,r=0,0
@@ -16,8 +18,7 @@ class Solution:
             return 0
         else:
             return ans    
-
-            
+#pattern : sliding window  #time complexity : O(n)
 
 
         

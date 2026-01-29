@@ -1,3 +1,5 @@
+#problem statement:find the length of the longest subarray with sum k
+
 class Solution:
     def longestSubarray(self, arr, k):  
         ans=0        
@@ -11,3 +13,4 @@ class Solution:
             if prefix not in h:
                 h[prefix]=i
         return ans    
+#pattern : prefix sum + hashmap  #time complexity : O(n)    

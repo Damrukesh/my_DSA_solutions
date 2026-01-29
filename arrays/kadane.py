@@ -15,3 +15,7 @@ class Solution:
                 sub+=n
                 ans=max(sub,ans)
         return ans         
+    
+    
+    
+#pattern : kadane's algorithm  #time complexity : O(n)
