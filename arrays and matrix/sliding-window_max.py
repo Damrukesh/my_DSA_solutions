@@ -17,4 +17,5 @@ class Solution:
         return ans
 
 # Time Complexity: O(N) where N is the number of elements in the input list nums.
-# Space Complexity: O(K) for storing the elements in the deque q.   
+# Space Complexity: O(K) for storing the elements in the deque q.
+# Pattern: Sliding Window, Deque   

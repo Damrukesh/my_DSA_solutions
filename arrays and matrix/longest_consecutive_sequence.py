@@ -12,4 +12,5 @@ class Solution:
         return longest        
 
 # Time Complexity: O(N) where N is the number of elements in the input list nums.
-# Space Complexity: O(N) for storing the elements in the set s.     
+# Space Complexity: O(N) for storing the elements in the set s.
+# Pattern: Hash Set, Linear Scan     

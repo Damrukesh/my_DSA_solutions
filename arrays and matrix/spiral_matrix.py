@@ -22,4 +22,7 @@ class Solution:
             l+=1    
 
     
-        return ans      
+        return ans 
+# Time: O(MN) where M is the number of rows and N is the number of columns in the input matrix. We have a single pass through all the elements of the matrix to add them to the ans list, which takes O(MN) time.
+# Space: O(MN) in the worst case, where all elements of the matrix are
+#pattern: Simulation, Matrix         

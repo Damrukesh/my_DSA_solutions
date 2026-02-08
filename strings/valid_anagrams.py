@@ -14,6 +14,9 @@ class Solution:
         for c in h:
             if h[c]!=0:
                 return False
-        return True                
+        return True   
+# Time: O(N) where N is the length of the input strings s and t. We have a single pass through both strings to count the frequency of characters, which takes O(N) time.
+# Space: O(1) if we don't consider the space used to store the input strings
+# pattern: Hash Map, String Manipulation                 
 
         

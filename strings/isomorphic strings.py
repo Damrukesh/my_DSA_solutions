@@ -9,3 +9,6 @@ class Solution:
             sh[a]=b
             th[b]=a
         return True    
+# Time: O(N) where N is the length of the input strings s and t. We have a single pass through both strings to check for isomorphism, which takes O(N) time.
+# Space: O(1) if we don't consider the space used to store the input strings
+# pattern: Hash Map, String Manipulation    
