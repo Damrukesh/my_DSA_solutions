@@ -31,7 +31,11 @@ class Solution:
                     have-=1
                 l+=1
         a,b=res                  
-        return s[a:b+1] if reslength!=float('inf') else ""     
-
+        return s[a:b+1] if reslength!=float('inf') else ""   
+    
+# Time Complexity: O(N) where N is the length of the input string s. We have a single pass through the string to find the minimum window substring, which takes O(N) time.
+# Space Complexity: O(M) where M is the size of the character set. We are
+#pattern: Hash Map, Sliding Window      
+#problem link: https://leetcode.com/problems/minimum-window-substring/description/
 
         
