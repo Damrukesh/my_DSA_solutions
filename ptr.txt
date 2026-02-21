@@ -1,0 +1,8 @@
+easy: direct logic and direct pattern
+medium: tricky logic but direct pattern easy solving
+hard: tricky logic + tough code structuring 
+
+
+basic calc 2
+multiply strings
+single occurence log n 
