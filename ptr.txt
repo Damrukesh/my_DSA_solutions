@@ -5,4 +5,6 @@ hard: tricky logic + tough code structuring
 
 basic calc 2
 multiply strings
-single occurence log n 
+single occurence log n
+lc 981
+matrix median
