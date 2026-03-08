@@ -8,3 +8,4 @@ multiply strings
 single occurence log n
 lc 981
 matrix median
+allocation problems
