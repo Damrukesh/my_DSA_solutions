@@ -21,8 +21,7 @@ class Solution:
         else:
             return ans     
 
-             
-        
-
-
-                                                                                           
+# Time Complexity: O(N) where N is the length of the input string
+# Space Complexity: O(N) for the stack
+# Pattern: Greedy + Stack
+# Trick: Use monotonic stack - pop larger digits while we have k removals left. Build smallest number by keeping smaller digits. Then remove remaining k digits from end if needed.

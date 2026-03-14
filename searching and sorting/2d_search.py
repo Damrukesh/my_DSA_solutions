@@ -22,4 +22,7 @@ class Solution:
                 l=mid1+1
         return False            
 
-        
+# Time Complexity: O(log M + log N) where M is number of rows and N is number of columns
+# Space Complexity: O(1)
+# Pattern: Binary Search (2D)
+# Trick: First binary search on rows to find which row the target could be in, then binary search within that row

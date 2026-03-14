@@ -25,4 +25,7 @@ class Solution:
                 return False
         return True             
 
-# trick : reverse the second half of the list and then compare it with the first half if they are equal then its a palindrome
+# Time Complexity: O(N) where N is the number of nodes
+# Space Complexity: O(1) - in-place reversal
+# Pattern: Slow/Fast Pointers + List Reversal
+# Trick: Use fast/slow pointers to find middle. Reverse second half in place. Compare first half with reversed second half to check palindrome

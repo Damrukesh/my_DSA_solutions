@@ -9,6 +9,9 @@ class Solution:
             s.add(cur)
             cur=cur.next
              
-# tro detect cycle without extra space we can use two pointers one slow and one fast
-# we move slow by one step and fast by two steps if there is a cycle they will
+# Time Complexity: O(N) where N is the number of nodes
+# Space Complexity: O(N) for storing nodes in the set
+# Pattern: Hash Set Detection
+# Alternative Pattern (Floyd's Cycle Detection): Two Pointers - use slow moving 1 step and fast moving 2 steps
+# Trick: If there's a cycle, slow and fast pointers will meet. Then find cycle start by moving one pointer to head and moving both 1 step at a time
         

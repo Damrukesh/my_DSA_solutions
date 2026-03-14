@@ -21,8 +21,7 @@ class Solution:
             temp1=end.next
             end.next=start
             end=temp1
-# trick : reverse the second half of the list and then merge it with the first half of the list            
-
-
-
-        
+# Time Complexity: O(N) where N is the number of nodes
+# Space Complexity: O(1) - in-place reordering
+# Pattern: Slow/Fast Pointers + List Reversal + Merge
+# Trick: Find middle with fast/slow pointers, reverse second half, merge first and reversed second half by alternating nodes

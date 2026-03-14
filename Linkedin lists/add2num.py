@@ -19,6 +19,7 @@ class Solution:
             if l2:l2=l2.next 
         return dummy.next     
 
-# trick : add the two numbers and keep track of the carry and then return the result as a linked list
-        
-        
+# Time Complexity: O(max(L1, L2)) where L1 and L2 are lengths of the two linked lists
+# Space Complexity: O(max(L1, L2)) for the result list
+# Pattern: Linked List Traversal with Arithmetic
+# Trick: Traverse both lists simultaneously, sum values with carry, create new node with (sum % 10), propagate carry to next iteration. Handle different lengths and final carry

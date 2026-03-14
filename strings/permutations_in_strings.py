@@ -14,3 +14,8 @@ class Solution:
                 i+=1
             j+=1    
         return False
+
+# Time Complexity: O(N) where N is the length of s2
+# Space Complexity: O(1) - fixed array of 26 characters
+# Pattern: Sliding Window with Character Frequency Array
+# Trick: Use fixed array of 26 instead of hashmap to track character frequencies, then compare with sliding window of same size
