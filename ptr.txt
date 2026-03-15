@@ -2,10 +2,11 @@ easy: direct logic and direct pattern
 medium: tricky logic but direct pattern easy solving
 hard: tricky logic + tough code structuring 
 
-
+---skipped for now---
 basic calc 2
 multiply strings
 single occurence log n
 lc 981
 matrix median
 allocation problems
+day 34 and day 35
