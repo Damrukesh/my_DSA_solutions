@@ -32,3 +32,4 @@ class Solution:
 # time complexity is O(m*n) where m and n are the number of rows and columns in the grid
 # space complexity is O(m*n) in the worst case when all oranges are rotten and we have to add all of them to the queue.
 # traverse the grid once to find the rotten oranges and count the fresh oranges, then use bfs to rot the fresh oranges and count the time taken.
+# multi level bfs , marking the fresh ones as 2 without using a visited array, as we can use the grid itself to mark the visited oranges.
