@@ -10,6 +10,11 @@ class Solution:
             return -1
         else:
             return dp[amount]                
-# trick: Use a dp array where dp[i] represents the minimum coins needed for amount i. Initialize with infinity and set dp[0]=0. For each amount, iterate through coins and update dp[i] with the minimum of current dp[i] and 1 + dp[i - coin]. Finally, check if dp[amount] is still infinity, return -1 if it is, otherwise return dp[amount].
+# trick and method: Use a dp array where dp[i] represents 
+# the minimum coins needed for amount i. Initialize with infinity and 
+# set dp[0]=0. For each amount, iterate through coins and update dp[i] 
+# with the minimum of current dp[i] and 1 + dp[i - coin]. 
+# Finally, check if dp[amount] is still infinity, return -1 if it is, 
+# otherwise return dp[amount].
 # Time Complexity: O(amount * number of coins)
 #pattern: Dynamic Programming - Unbounded Knapsack
