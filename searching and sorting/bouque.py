@@ -1,3 +1,9 @@
+# Problem: Minimum bloom day needed to make m bouquets with k consecutive flowers each
+# Pattern: Binary Search on Answer - Check feasibility for each guess
+# Brute Force: Try each day sequentially - O(max_day * n)
+# Method: Binary search on bloom day, count valid bouquets for that day
+# Time: O(n log(max_day)), Space: O(1)
+
 class Solution:
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
         a=1
@@ -24,5 +30,4 @@ class Solution:
         if m * k > len(bloomDay):
             return -1
         else:    
-            return ans                  
-# pattern: binary search on answer, check if the current guess is valid by counting how many bouquets can be made with the given bloom day. If it's valid, try to find a smaller bloom day, otherwise try a larger bloom day.
+            return ans

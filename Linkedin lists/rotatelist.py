@@ -1,3 +1,9 @@
+# Problem: Rotate linked list right by k positions
+# Pattern: Two Pointers with Length Calculation - Find rotation point
+# Brute Force: Rotate one by one k times - O(n*k)
+# Method: Find length, calculate new start position (length - k%length), reconnect
+# Time: O(n), Space: O(1) only pointer storage
+
 class Solution:
     def rotateRight(self, head: Optional[ListNode], k: int) -> Optional[ListNode]:
         if not head or not head.next:
@@ -18,8 +24,3 @@ class Solution:
         new.next=None
         cur.next=head
         return start
-
-# Time Complexity: O(N) where N is the number of nodes
-# Space Complexity: O(1) - only using a few pointers
-# Pattern: Two Pointers with Length Calculation
-# Trick: Find list length, calculate rotation point, break the list there, and reconnect to form rotated list. Optimize with modulo (k % count) to handle rotations > length

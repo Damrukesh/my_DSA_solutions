@@ -1,3 +1,9 @@
+# Problem: Ship all packages within days with minimum capacity
+# Pattern: Binary Search on Answer - Check feasibility for each guess capacity
+# Brute Force: Try each capacity from max_weight to sum - O(n * sum)
+# Method: Binary search on capacity, count days needed for current capacity
+# Time: O(n log(sum)), Space: O(1)
+
 class Solution:
     def shipWithinDays(self, weights: List[int], days: int) -> int:
         a=max(weights)
@@ -20,6 +26,4 @@ class Solution:
                 b=c-1
             else:
                 a=c+1
-        return ans
-
-# trick is to calculate the number of days needed to ship all packages at the current guess of capacity (c) by iterating through the weights and accumulating them until they exceed c, at which point we increment the day count and reset the accumulated weight. If the total days needed is less than or equal to the given days, we try to find a smaller capacity, otherwise we try a larger capacity.                
+        return ans                

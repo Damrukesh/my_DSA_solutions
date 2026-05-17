@@ -1,3 +1,9 @@
+# Problem: Set entire row and column to 0 if element is 0, modify in-place
+# Pattern: Use first row/column as markers - Handle edge case with extra variable
+# Brute Force: Store zeros positions, then set to 0 - O(m*n) space
+# Method: Use matrix[0][j] and matrix[i][0] as markers, track first row separately
+# Time: O(m*n), Space: O(1)
+
 class Solution:
     def setZeroes(self, matrix: List[List[int]]) -> None:
         c=len(matrix[0])
@@ -22,11 +28,4 @@ class Solution:
 
         if extra==0:
             for i in range(c):
-                matrix[0][i]=0             
-                            
-
-
-                    
-                
-#problem statement:set matrix zeroes if any element is zero in that row or column
-#pattern : two arrays to track rows and columns #time complexity : O(m*n)
+                matrix[0][i]=0

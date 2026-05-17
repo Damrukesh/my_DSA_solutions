@@ -1,3 +1,9 @@
+# Problem: Reverse entire singly linked list iteratively
+# Pattern: Iterative Reversal with Three Pointers - prev, cur, next
+# Brute Force: Recursive approach - O(n) space on call stack
+# Method: Use three pointers to reverse direction of next pointers as we traverse
+# Time: O(n), Space: O(1) only pointer storage
+
 # Definition for singly-linked list.
 # class ListNode:
 #     def __init__(self, val=0, next=None):
@@ -15,8 +21,3 @@ class Solution:
             cur.next=prev
             prev=cur
         return prev
-
-# Time Complexity: O(N) where N is the number of nodes in the linked list
-# Space Complexity: O(1) - only using a few pointers
-# Pattern: Iterative Reversal with Three Pointers
-# Trick: Use three pointers (prev, cur, next) to reverse the list in place by changing the direction of next pointers

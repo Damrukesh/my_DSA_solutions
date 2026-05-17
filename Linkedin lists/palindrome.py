@@ -1,3 +1,9 @@
+# Problem: Check if linked list is palindrome
+# Pattern: Slow/Fast Pointers + List Reversal - Find middle, reverse second half, compare
+# Brute Force: Convert to array and check palindrome - O(n) space
+# Method: Use fast/slow pointers to find middle, reverse second half, compare both halves
+# Time: O(n), Space: O(1) in-place
+
 # Definition for singly-linked list.
 # class ListNode:
 #     def __init__(self, val=0, next=None):
@@ -23,9 +29,4 @@ class Solution:
                 prev=prev.next
             else:
                 return False
-        return True             
-
-# Time Complexity: O(N) where N is the number of nodes
-# Space Complexity: O(1) - in-place reversal
-# Pattern: Slow/Fast Pointers + List Reversal
-# Trick: Use fast/slow pointers to find middle. Reverse second half in place. Compare first half with reversed second half to check palindrome
+        return True

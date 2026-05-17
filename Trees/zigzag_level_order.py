@@ -1,3 +1,9 @@
+# Problem: Binary tree zigzag level order traversal (alternate direction per level)
+# Pattern: BFS Level Order Traversal - Reverse alternate levels
+# Brute Force: Store all values, sort by level, then reverse alternate levels
+# Method: BFS queue process level by level, reverse every other level
+# Time: O(n), Space: O(w) where w is max width
+
 class Solution:
     def zigzagLevelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
         if not root:
@@ -19,7 +25,3 @@ class Solution:
         for i in range(1,len(result),2):
             result[i].reverse()            
         return result
-
-# time complexity is O(n) where n is the number of nodes in the tree
-# space complexity is O(n) in the worst case when the tree is a complete binary tree
-# traverse the tree level by level using bfs and store the values of each level in a list, then reverse the values of every alternate level to get the zigzag order.

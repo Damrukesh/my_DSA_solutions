@@ -1,3 +1,9 @@
+# Problem: Group strings that are anagrams together
+# Pattern: Hash Map with Character Frequency as Key
+# Brute Force: Compare each string with all others - O(n^2 * k log k)
+# Method: Create frequency tuple for each string as key, group by key
+# Time: O(n*k log k), Space: O(n*k) where n is strings, k is avg length
+
 from collections import defaultdict
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
@@ -12,10 +18,6 @@ class Solution:
                 ans[tuple(count)]=[c]
             count=[0]*26  
         return list(list(ans.values()))
-    
-# Time: O(NK) where N is the number of strings and K is the maximum length of a string in strs. We iterate through each string and count the frequency of each character, which takes O(K) time. The overall time complexity is O(NK).
-# Space: O(NK) in the worst case, where all strings are different and have the same frequency of characters. In this case, we would have N entries in the ans dictionary, and each entry would store a list of strings that are anagrams of each other. The space complexity is O(NK) because we are storing all the strings in the ans dictionary.         
-# pattern: Hash Map, String Manipulation
 
                  
             

@@ -1,3 +1,9 @@
+# Problem: Find maximum in every sliding window of size k
+# Pattern: Deque + Sliding Window - Store indices of useful elements
+# Brute Force: For each window, scan all k elements - O(n*k)
+# Method: Deque stores indices in decreasing order of values, remove old indices outside window
+# Time: O(n), Space: O(k)
+
 class Solution:
     def maxSlidingWindow(self, nums: List[int], k: int) -> List[int]:
         q=collections.deque()
@@ -14,8 +20,4 @@ class Solution:
             if l>q[0]:
                 q.popleft()
             r+=1
-        return ans
-
-# Time Complexity: O(N) where N is the number of elements in the input list nums.
-# Space Complexity: O(K) for storing the elements in the deque q.
-# Pattern: Sliding Window, Deque   
+        return ans   

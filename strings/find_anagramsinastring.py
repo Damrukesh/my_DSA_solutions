@@ -1,3 +1,9 @@
+# Problem: Find all indices where anagrams of p start in s
+# Pattern: Hash Map + Sliding Window - Match character frequencies
+# Brute Force: Generate all anagrams of p, search in s - O(n! * n)
+# Method: Maintain frequency map of p, slide window in s, compare maps
+# Time: O(n), Space: O(1) fixed alphabet size
+
 class Solution:
     def findAnagrams(self, s: str, p: str) -> List[int]:
         ans=[]
@@ -25,10 +31,7 @@ class Solution:
                     smap[s[i]]-=1    
                 i+=1
             j+=1    
-        return ans
-# Time Complexity: O(N) where N is the length of the input string s. We have a single pass through the string to find all anagrams, which takes O(N) time.
-# Space Complexity: O(M) where M is the size of the character set. We are using two hash maps to store the frequency of characters in the pattern and the current window, which takes O(M) space.
-#pattern: Hash Map, Sliding Window            
+        return ans            
 
 
                 

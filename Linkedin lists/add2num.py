@@ -1,3 +1,9 @@
+# Problem: Add two numbers represented as linked lists (stored in reverse)
+# Pattern: Linked List Traversal with Arithmetic carry propagation
+# Brute Force: Convert to integers, add, convert back - not feasible for large numbers
+# Method: Traverse both lists, sum digits with carry, create new nodes with (sum % 10)
+# Time: O(max(L1, L2)), Space: O(max(L1, L2))
+
 # Definition for singly-linked list.
 # class ListNode:
 #     def __init__(self, val=0, next=None):
@@ -17,9 +23,4 @@ class Solution:
             cur=cur.next
             if l1:l1=l1.next 
             if l2:l2=l2.next 
-        return dummy.next     
-
-# Time Complexity: O(max(L1, L2)) where L1 and L2 are lengths of the two linked lists
-# Space Complexity: O(max(L1, L2)) for the result list
-# Pattern: Linked List Traversal with Arithmetic
-# Trick: Traverse both lists simultaneously, sum values with carry, create new node with (sum % 10), propagate carry to next iteration. Handle different lengths and final carry
+        return dummy.next

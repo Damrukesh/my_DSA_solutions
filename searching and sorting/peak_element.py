@@ -1,3 +1,9 @@
+# Problem: Find index of peak element (greater than neighbors)
+# Pattern: Binary Search - Compare middle with neighbors to determine direction
+# Brute Force: Linear scan - O(n)
+# Method: Use binary search, compare mid with neighbors to find peak direction
+# Time: O(log n), Space: O(1)
+
 class Solution:
     def findPeakElement(self, nums: List[int]) -> int:
         l=0
@@ -9,8 +15,4 @@ class Solution:
             elif mid<len(nums)-1 and nums[mid]<nums[mid+1]:
                 l=mid+1
             else:
-                return mid 
-        
-# time complexity: O(logn)
-# pattern: binary search
-# trick: check the left and right neighbors of the middle element to determine the direction of the search.    
+                return mid    

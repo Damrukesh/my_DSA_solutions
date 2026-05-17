@@ -1,3 +1,9 @@
+# Problem: Reorder list as L0->Ln->L1->Ln-1->... (interleave first and last halves reversed)
+# Pattern: Slow/Fast Pointers + List Reversal + Merge - Find mid, reverse second half, merge
+# Brute Force: Store nodes in array, reorder in place - O(n) space
+# Method: Find middle, reverse second half, alternately pick from both halves
+# Time: O(n), Space: O(1) in-place
+
 class Solution:
     def reorderList(self, head: Optional[ListNode]) -> None:
         slow,fast=head,head
@@ -21,7 +27,3 @@ class Solution:
             temp1=end.next
             end.next=start
             end=temp1
-# Time Complexity: O(N) where N is the number of nodes
-# Space Complexity: O(1) - in-place reordering
-# Pattern: Slow/Fast Pointers + List Reversal + Merge
-# Trick: Find middle with fast/slow pointers, reverse second half, merge first and reversed second half by alternating nodes

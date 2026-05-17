@@ -1,3 +1,9 @@
+# Problem: Find median of two sorted arrays
+# Pattern: Binary Search - Partition arrays to find median position
+# Brute Force: Merge arrays and find median - O((m+n) log(m+n))
+# Method: Binary search on smaller array, find valid partition where all left <= all right
+# Time: O(log(min(m,n))), Space: O(1)
+
 class Solution:
     def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
         ans=[]
@@ -24,10 +30,4 @@ class Solution:
             elif l1>r2:
                 r=m-1
             else:
-                l=m+1    
-
-
-# pattern: binary search on the smaller array, calculate the partition of the larger array based on the partition of the smaller array, check if the partition is valid by comparing the left and right elements of both partitions. If it's valid, calculate the median based on the total length of the combined arrays. If it's not valid, adjust the binary search range accordingly.
-# trick: use float('-inf') and float('inf') to handle edge cases when the partition is at the beginning or end of the array.
-
-# Goat problem: https://leetcode.com/problems/median-of-two-sorted-arrays/description/
+                l=m+1

@@ -1,3 +1,9 @@
+# Problem: Rearrange array to next lexicographically greater permutation in-place
+# Pattern: Find rightmost ascending pair, swap with larger element, reverse suffix
+# Brute Force: Generate all permutations and find next one - O(n! * log(n!))
+# Method: (1) Find rightmost i where nums[i] < nums[i+1] (2) Find rightmost j > i with nums[j] > nums[i] (3) Swap (4) Reverse suffix
+# Time: O(n), Space: O(1)
+
 class Solution:
     def nextPermutation(self, nums: List[int]) -> None:
         j=len(nums)-1
@@ -18,6 +24,3 @@ class Solution:
             nums[a],nums[b]=nums[b],nums[a]
             a+=1
             b-=1
-
-
-#pattern : just a logical trick  #time complexity : O(n)

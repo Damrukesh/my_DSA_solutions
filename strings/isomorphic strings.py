@@ -1,3 +1,9 @@
+# Problem: Check if two strings are isomorphic (character mapping is bijection)
+# Pattern: Two Hash Maps - Track mapping in both directions
+# Brute Force: Compare all permutations - O(n!)
+# Method: Use two maps to ensure one-to-one character mapping
+# Time: O(n), Space: O(1) fixed alphabet size
+
 class Solution:
     def isIsomorphic(self, s: str, t: str) -> bool:
         sh={}
@@ -9,6 +15,3 @@ class Solution:
             sh[a]=b
             th[b]=a
         return True    
-# Time: O(N) where N is the length of the input strings s and t. We have a single pass through both strings to check for isomorphism, which takes O(N) time.
-# Space: O(1) if we don't consider the space used to store the input strings
-# pattern: Hash Map, String Manipulation    

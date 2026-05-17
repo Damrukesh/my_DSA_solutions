@@ -1,3 +1,9 @@
+# Problem: Flood fill - change connected pixels of same color to new color
+# Pattern: BFS (or DFS) - Graph traversal to visit all connected cells
+# Brute Force: Recursion without queue could cause stack overflow for large areas
+# Method: Use BFS with deque, mark visited by changing color, process neighbors
+# Time: O(m*n), Space: O(m*n) for queue in worst case
+
 class Solution:
     def floodFill(self, image: List[List[int]], sr: int, sc: int, color: int) -> List[List[int]]:
         directions=[(0,1),(0,-1),(1,0),(-1,0)]
@@ -20,10 +26,4 @@ class Solution:
                     if row in range(R) and col in range(C) and image[row][col]==start:
                         q.append((row,col))
                         image[row][col]=color
-        return image                
-
-
-
-# time complexity is O(m*n) where m and n are the number of rows and columns in the grid
-# space complexity is O(m*n) in the worst case when all pixels are the same color and we have to add all of them to the queue.
-# traverse the grid once to find the starting pixel and then use bfs to change the color of the connected pixels with the same color. Use a queue to keep track of the pixels to be processed and mark the visited pixels by changing their color to the new color.
+        return image

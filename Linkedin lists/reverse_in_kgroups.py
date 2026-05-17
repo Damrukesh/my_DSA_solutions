@@ -1,3 +1,9 @@
+# Problem: Reverse nodes in groups of k, with last incomplete group left as-is
+# Pattern: Iterative Reversal in Groups with Dummy Node - Process k nodes at a time
+# Brute Force: Recursion to process groups - O(n) space on call stack
+# Method: Use dummy node, reverse k nodes, reconnect, move to next group
+# Time: O(n), Space: O(1) only pointer storage
+
 class Solution:
     def reverseKGroup(self, head, k):
         dummy = ListNode(0)
@@ -27,7 +33,3 @@ class Solution:
             cur = cur.next
             k -= 1
         return cur
-# Time Complexity: O(N) where N is the number of nodes in the linked list
-# Space Complexity: O(1) - only using a few pointers
-# Pattern: Iterative Reversal in Groups with Dummy Node
-# Trick: Use a dummy node to simplify edge cases. For each group of k nodes, reverse them in place and connect the reversed group back to the main list. Use a helper function to find the k-th node for each group.

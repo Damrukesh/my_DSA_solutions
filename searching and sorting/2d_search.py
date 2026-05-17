@@ -1,3 +1,9 @@
+# Problem: Search for target in 2D matrix (sorted rows and columns separately)
+# Pattern: Binary Search (2D) - Two binary searches on rows then columns
+# Brute Force: Linear search - O(m*n)
+# Method: Binary search to find row, then binary search within that row
+# Time: O(log m + log n), Space: O(1)
+
 class Solution:
     def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
         l=0
@@ -20,9 +26,4 @@ class Solution:
                 r=mid1-1
             else:
                 l=mid1+1
-        return False            
-
-# Time Complexity: O(log M + log N) where M is number of rows and N is number of columns
-# Space Complexity: O(1)
-# Pattern: Binary Search (2D)
-# Trick: First binary search on rows to find which row the target could be in, then binary search within that row
+        return False

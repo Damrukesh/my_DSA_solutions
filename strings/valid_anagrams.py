@@ -1,3 +1,9 @@
+# Problem: Check if two strings are anagrams
+# Pattern: Hash Map - Count character frequencies
+# Brute Force: Sort both strings and compare - O(n log n)
+# Method: Count characters in first string, decrement with second string
+# Time: O(n), Space: O(1) fixed alphabet
+
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         h={}
@@ -14,9 +20,6 @@ class Solution:
         for c in h:
             if h[c]!=0:
                 return False
-        return True   
-# Time: O(N) where N is the length of the input strings s and t. We have a single pass through both strings to count the frequency of characters, which takes O(N) time.
-# Space: O(1) if we don't consider the space used to store the input strings
-# pattern: Hash Map, String Manipulation                 
+        return True                 
 
         

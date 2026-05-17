@@ -1,3 +1,9 @@
+# Problem: Reverse nodes between positions left and right (1-indexed)
+# Pattern: Iterative Reversal with Dummy Node + Three Pointers
+# Brute Force: Reverse entire list, rotate to position, reverse back
+# Method: Use dummy node, isolate segment to reverse, reverse it, reconnect to main list
+# Time: O(n), Space: O(1) only pointer storage
+
 class Solution:
     def reverseBetween(self, head: Optional[ListNode], left: int, right: int) -> Optional[ListNode]:
         cur=head
@@ -21,8 +27,4 @@ class Solution:
         old.next=prev
         b.next=r
         return dummy.next
-# Time Complexity: O(N) where N is the number of nodes in the linked list
-# Space Complexity: O(1) - only using a few pointers
-# Pattern: Iterative Reversal with Three Pointers
-# Trick: Use three pointers (prev, cur, next) to reverse the specified portion of the list in place by changing the direction of next pointers. Handle edge cases where left is 1 (reversing from head) and when right is the last node.
     

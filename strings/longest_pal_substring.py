@@ -1,3 +1,9 @@
+# Problem: Find longest palindromic substring
+# Pattern: Expand Around Center - Check each possible center
+# Brute Force: Check all substrings - O(n^3)
+# Method: For each character and pair, expand around center until mismatch
+# Time: O(n^2), Space: O(1)
+
 class Solution:
     def longestPalindrome(self, s: str) -> str:
         anso=""
@@ -27,10 +33,6 @@ class Solution:
         if len(anso)>len(anse):
             return anso
         else:
-            return anse                    
-
-# Time: O(N^2) where N is the length of the input string s. We have two nested loops, and in the worst case, we may need to check all possible substrings of s, which takes O(N^2) time.
-# Space: O(1) if we don't consider the space used to store the output string. We are using a constant amount of extra space to store the longest palindromic substring found so far (anso and anse). The space complexity is O(1) because we are not using any additional data structures that grow with the input size.
-# pattern: Two Pointers, Expand Around Center
+            return anse
 
             

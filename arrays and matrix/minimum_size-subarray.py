@@ -1,4 +1,8 @@
-#problem statement:find the minimum size subarray with sum greater than or equal to target
+# Problem: Find minimum length subarray with sum >= target
+# Pattern: Sliding Window - Two pointers shrink window when sum is sufficient
+# Brute Force: Check all subarrays and calculate their sums - O(n^2)
+# Method: Expand right pointer to accumulate sum, shrink left when target reached
+# Time: O(n), Space: O(1)
 
 class Solution:
     def minSubArrayLen(self, target: int, nums: List[int]) -> int:
@@ -17,8 +21,7 @@ class Solution:
         if ans==float('inf'):
             return 0
         else:
-            return ans    
-#pattern : sliding window  #time complexity : O(n)
+            return ans
 
 
         

@@ -1,3 +1,9 @@
+# Problem: Valid palindrome 2 - alphanumeric only, case insensitive, allow 1 delete
+# Pattern: Two Pointers + Greedy - Skip at most one character
+# Brute Force: Try deleting each character and check palindrome - O(n^2)
+# Method: Use two pointers, on mismatch try skipping left or right character
+# Time: O(n), Space: O(1)
+
 class Solution:
     def validPalindrome(self, s: str) -> bool:
         i=0
@@ -17,9 +23,5 @@ class Solution:
                 j-=1
             else:
                 return pal(i+1,j,s) or pal(i,j-1,s)
-        return True     
-
-# Time: O(N) where N is the length of the input string s. We have a single pass through the string to check for palindromicity, and in the worst case, we may need to check two additional substrings (one by skipping the left character and one by skipping the right character), which also takes O(N) time.
-# Space: O(1) if we don't consider the space used to store the input string
-# pattern: Two Pointers, Greedy 
+        return True 
         

@@ -1,3 +1,9 @@
+# Problem: Binary tree right side view (rightmost node at each level)
+# Pattern: BFS Level Order Traversal - Take last node of each level
+# Brute Force: DFS tracking depth, store rightmost at each depth - O(n)
+# Method: BFS queue, process level by level, append last node value
+# Time: O(n), Space: O(w) where w is max width
+
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):
@@ -21,7 +27,3 @@ class Solution:
                 if node.right:
                     q.append(node.right)
         return res
-        
-# time complexity is O(n) where n is the number of nodes in the tree
-# space complexity is O(n) in the worst case when the tree is a complete binary tree
-# traverse the tree level by level using bfs and store the value of the last node of each level in a list to get the right view of the tree.
