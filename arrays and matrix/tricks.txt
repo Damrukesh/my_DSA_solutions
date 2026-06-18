@@ -1,0 +1,1 @@
+for minimum window :  use for loop and shrink only l 
