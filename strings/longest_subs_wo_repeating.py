@@ -6,15 +6,16 @@
 
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
-        st={}
+        if not s:
+            return 0  
+        h={}
         i,j=0,0
         ans=0
         while j<len(s):
-            if s[j] not in st:
-                st[s[j]]=j
-            else:
-                i=max(i,st[s[j]]+1)
-                st[s[j]]=j
+            if s[j] in h:
+                i=max(i,h[s[j]]+1)
             ans=max(ans,j-i+1)
-            j+=1  
+            h[s[j]]=j
+            j+=1
         return ans
+#mistake : max(i,h[s[j]]+1)
