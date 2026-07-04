@@ -1,0 +1,8 @@
+1.for minimum window :  use for loop and shrink only l 
+2.q=deque()
+            q.append((r,c))
+
+dp{
+1. initialize array first
+2. start the operation from the last where the choice is valid using the base cases
+}
