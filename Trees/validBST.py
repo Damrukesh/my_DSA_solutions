@@ -1,0 +1,13 @@
+#problem:
+
+class Solution:
+    def isValidBST(self, root: Optional[TreeNode]) -> bool:
+        left=float('-inf')
+        right=float('inf')
+        def dfs(root,left,right):
+            if not root:
+                return True
+            if not(root.val>left and root.val<right):
+                return False
+            return dfs(root.left,left,root.val) and dfs(root.right,root.val,right)
+        return dfs(root,left,right)

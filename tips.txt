@@ -1,8 +1,12 @@
-1.for minimum window :  use for loop and shrink only l 
-2.q=deque()
-            q.append((r,c))
+ITS EASY ! EASY ! just calmly figure out the logic and stay consisten everyday
 
-dp{
-1. initialize array first
+------BASIC ARRAY PATTERNS--------
+1.for minimum window :  use for loop and shrink only l 
+
+------GRAPHS---------
+1. q=deque() , q.append((r,c))
+2. problems where find set of all As to reach B , solve all As starting from B 
+
+-----DP--------
+1. initialize array and add an extra dp[n] first
 2. start the operation from the last where the choice is valid using the base cases
-}
