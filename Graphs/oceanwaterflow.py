@@ -1,3 +1,11 @@
+"""
+# Problem: Pacific Atlantic Water Flow - cells reachable to both oceans
+# Pattern: BFS from multiple sources (reverse flow) on grid
+# Brute Force: For each cell, run BFS to check reachability — expensive
+# Method: BFS from ocean edges and intersect reachable sets
+# Time: O(R*C), Space: O(R*C)
+"""
+
 class Solution:
     def pacificAtlantic(self, heights: List[List[int]]) -> List[List[int]]:
         R=len(heights)

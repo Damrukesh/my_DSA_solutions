@@ -1,3 +1,9 @@
+# Problem: Determine if all courses can be finished given prerequisites (cycle detection)
+# Pattern: Graph Cycle Detection (DFS)
+# Brute Force: Try all orderings (factorial) — impractical
+# Method: Build adjacency list and use DFS with recursion stack to detect cycles
+# Time: O(V + E), Space: O(V + E)
+
 class Solution:
     def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
         h={i:[] for i in range(numCourses)}

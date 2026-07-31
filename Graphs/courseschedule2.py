@@ -1,3 +1,9 @@
+# Problem: Course schedule II - return order of courses if possible
+# Pattern: Topological Sort via DFS (or Kahn's algorithm)
+# Brute Force: Try permutations - infeasible
+# Method: DFS with visited/path sets to detect cycles and build ordering
+# Time: O(V + E), Space: O(V + E)
+
 class Solution:
     def findOrder(self, numCourses: int, prerequisites: List[List[int]]) -> List[int]:
         h={i:[] for i in range(numCourses)}

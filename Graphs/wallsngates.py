@@ -1,3 +1,11 @@
+"""
+# Problem: Walls and Gates - fill distances to nearest gate in rooms grid
+# Pattern: Multi-source BFS from gates
+# Brute Force: For each room, BFS to nearest gate — expensive
+# Method: Enqueue all gates (0s) and BFS to propagate distances
+# Time: O(R*C), Space: O(R*C)
+"""
+
 class Solution:
     def islandsAndTreasure(self, grid: List[List[int]]) -> None:
         ROWS=len(grid)

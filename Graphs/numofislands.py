@@ -1,3 +1,11 @@
+"""
+# Problem: Number of islands in a binary grid
+# Pattern: Flood fill / DFS/BFS connected components
+# Brute Force: Re-scan cells without visited tracking leading to repeats
+# Method: BFS/DFS with visited tracking to count components
+# Time: O(R*C), Space: O(R*C)
+"""
+
 class Solution:
     def numIslands(self, grid: List[List[str]]) -> int:
         from collections import deque

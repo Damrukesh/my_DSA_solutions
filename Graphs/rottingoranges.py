@@ -1,3 +1,11 @@
+"""
+# Problem: Rotten Oranges - minimum minutes to rot all fresh oranges
+# Pattern: Multi-source BFS on grid
+# Brute Force: Simulate each minute checking all neighbors without multi-source start
+# Method: Enqueue all initially rotten oranges and BFS level-by-level
+# Time: O(R*C), Space: O(R*C)
+"""
+
 class Solution:
     def orangesRotting(self, grid: List[List[int]]) -> int:
         from collections import deque
@@ -30,5 +38,4 @@ class Solution:
             return time
         else:
             return -1
-            
-        
+

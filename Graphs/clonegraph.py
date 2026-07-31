@@ -1,9 +1,9 @@
 """
-# Definition for a Node.
-class Node:
-    def __init__(self, val = 0, neighbors = None):
-        self.val = val
-        self.neighbors = neighbors if neighbors is not None else []
+# Problem: Clone an undirected graph (deep copy)
+# Pattern: Graph Traversal (DFS/BFS) with Hash Map to map originals to copies
+# Brute Force: Recreate nodes without mapping leads to duplicate nodes for cycles
+# Method: DFS/BFS and a dictionary mapping original node -> cloned node
+# Time: O(V + E), Space: O(V)
 """
 
 class Solution:

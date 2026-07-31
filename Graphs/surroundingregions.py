@@ -1,3 +1,11 @@
+"""
+# Problem: Capture surrounded regions in a board (flip enclosed 'O' to 'X')
+# Pattern: Boundary-connected components via BFS/DFS
+# Brute Force: For each region, check if touches boundary (expensive)
+# Method: Mark boundary-connected 'O's then flip remaining 'O's
+# Time: O(R*C), Space: O(R*C)
+"""
+
 class Solution:
     def solve(self, board: List[List[str]]) -> None:
         m=len(board)
