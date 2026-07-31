@@ -1,5 +1,3 @@
-# trick: BFS
-# method: use a queue to traverse the tree level by level, incrementing depth at each level until all nodes are processed.
 
 class Solution:
     def maxDepth(self, root: Optional[TreeNode]) -> int:

@@ -1,9 +1,12 @@
-# tree diameter is the length of the longest path between any two nodes in a tree. This path may or may not pass through the root.
-# trick is to find the longest path from left and right subtrees and add them together. The longest path from left and right subtrees can be found by finding the height of the left and right subtrees. The height of a tree is the number of edges on the longest path from the root to a leaf node.
-# pattern: recursive tree traversal, postorder traversal, depth first search, height of a tree, longest path in a tree, binary tree diameter, tree diameter algorithm, tree diameter problem, tree diameter solution, tree diameter implementation
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
 
-
-def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:
+class Solution:
+    def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:
         if not root:
             return
         self.result=0
@@ -16,3 +19,8 @@ def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:
             return 1+max(left,right)
         hunt(root)
         return self.result
+
+        
+            
+            
+

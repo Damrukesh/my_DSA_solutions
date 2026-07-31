@@ -1,7 +1,7 @@
-#trick: dp[i] = dp[i+1] + dp[i+2] if s[i:i+2] <= 26 else dp[i+1]
-# time: O(n), space: O(n)
-# brute force: recursion with memoization, time: O(n), space: O(n)
-
+# Problem: Count ways to decode a digit string where 'A'->1, 'B'->2, ..., 'Z'->26.
+# Brute force: Try splitting the string at every possible point and validate each decode, leading to exponential time.
+# Solution approach: Use dynamic programming from the end to count valid decodings for each suffix.
+# Time complexity: O(n), Space complexity: O(n)
 class Solution:
     def numDecodings(self, s: str) -> int:
         n=len(s)
@@ -26,3 +26,5 @@ class Solution:
             n-=1
         return dp[0]
             
+                   
+        

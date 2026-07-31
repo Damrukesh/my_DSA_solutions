@@ -1,7 +1,9 @@
-# trick: Use DFS to traverse the main tree and check for subtree matches using the same tree comparison function.
-# time complexity: O(m*n) where m is the number of nodes in the main tree and n is the number of nodes in the subtree. In the worst case, we may have to compare each node of the main tree with the subtree.
-# brute force approach: For each node in the main tree, check if the subtree rooted at that node is the same as the given subtree using the same tree comparison function.
-
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
 
 class Solution:   
     def isSubtree(self, root: Optional[TreeNode], subRoot: Optional[TreeNode]) -> bool:

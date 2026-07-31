@@ -1,9 +1,3 @@
-# Problem: Find minimum time for all oranges to rot (multi-source BFS)
-# Pattern: Multi-level BFS - Process all rotten oranges level by level
-# Brute Force: Simulate each day separately - O(m*n*days)
-# Method: Start with all rotten oranges in queue, process layer by layer
-# Time: O(m*n), Space: O(m*n) for queue
-
 class Solution:
     def orangesRotting(self, grid: List[List[int]]) -> int:
         from collections import deque
