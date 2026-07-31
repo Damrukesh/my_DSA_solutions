@@ -5,6 +5,12 @@
 #         self.left = left
 #         self.right = right
 
+# Problem: Find k-th smallest element in BST
+# Pattern: Inorder traversal of BST
+# Brute Force: Collect all values and sort them
+# Method: Traverse in-order and count until k
+# Time: O(N), Space: O(H)
+
 class Solution:
     def kthSmallest(self, root: Optional[TreeNode], k: int) -> int:
         #self.ans=[]

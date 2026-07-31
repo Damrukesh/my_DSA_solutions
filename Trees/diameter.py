@@ -5,6 +5,12 @@
 #         self.left = left
 #         self.right = right
 
+# Problem: Diameter of binary tree (longest path between nodes)
+# Pattern: Tree DFS with height propagation
+# Brute Force: Compute distances for all node pairs O(N^2)
+# Method: DFS returns subtree height and updates max diameter
+# Time: O(N), Space: O(H)
+
 class Solution:
     def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:
         if not root:

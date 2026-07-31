@@ -5,6 +5,12 @@
 #         self.left = left
 #         self.right = right
 
+# Problem: Right side view of a binary tree
+# Pattern: Level-order traversal (BFS)
+# Brute Force: Collect all nodes then filter by depth after traversal
+# Method: BFS by level, append last node of each level
+# Time: O(N), Space: O(N)
+
 class Solution:
     def rightSideView(self, root: Optional[TreeNode]) -> List[int]:
         if not root:

@@ -5,6 +5,12 @@
 #         self.left = left
 #         self.right = right
 
+# Problem: Construct binary tree from preorder and inorder traversal
+# Pattern: Divide and conquer using tree traversal properties
+# Brute Force: Try all tree shapes matching traversals
+# Method: Recursively build left/right subtrees from inorder split
+# Time: O(N^2) worst-case due to index() on inorder, Space: O(N)
+
 class Solution:
     def buildTree(self, preorder: List[int], inorder: List[int]) -> Optional[TreeNode]:
         n=len(inorder)

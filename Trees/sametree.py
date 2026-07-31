@@ -5,6 +5,12 @@
 #         self.left = left
 #         self.right = right
 
+# Problem: Check if two binary trees are identical
+# Pattern: Recursive tree comparison
+# Brute Force: Serialize and compare structures manually
+# Method: DFS compare nodes and subtrees
+# Time: O(N), Space: O(H)
+
 class Solution:
     def isSameTree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
         def doubledfs(p,q):

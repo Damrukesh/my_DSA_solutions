@@ -5,6 +5,12 @@
 #         self.left = left
 #         self.right = right
 
+# Problem: Validate a binary tree is a binary search tree
+# Pattern: DFS with min/max bounds
+# Brute Force: Inorder traversal + sort/check values
+# Method: Recursively enforce value ranges on subtrees
+# Time: O(N), Space: O(H)
+
 class Solution:
     def isValidBST(self, root: Optional[TreeNode]) -> bool:
         left=float('-inf')

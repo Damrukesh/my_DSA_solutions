@@ -5,6 +5,12 @@
 #         self.left = left
 #         self.right = right
 
+# Problem: Check if one tree is a subtree of another
+# Pattern: Tree comparison with DFS
+# Brute Force: Compare each node against subtree via repeated traversal
+# Method: Recursively match subtree at each node
+# Time: O(N*M), Space: O(H)
+
 class Solution:   
     def isSubtree(self, root: Optional[TreeNode], subRoot: Optional[TreeNode]) -> bool:
         def same(p,q):

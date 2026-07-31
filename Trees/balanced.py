@@ -5,6 +5,12 @@
 #         self.left = left
 #         self.right = right
 
+# Problem: Check if a binary tree is height-balanced
+# Pattern: DFS with height tracking and early exit
+# Brute Force: Compute heights repeatedly for each node
+# Method: Recursive height computation and imbalance flag
+# Time: O(N), Space: O(H)
+
 class Solution:
     def isBalanced(self, root: Optional[TreeNode]) -> bool:
         if not root:

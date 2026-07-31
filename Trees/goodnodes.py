@@ -5,6 +5,12 @@
 #         self.left = left
 #         self.right = right
 
+# Problem: Count good nodes in a binary tree
+# Pattern: DFS with path-maximum tracking
+# Brute Force: Evaluate each root-to-node path separately
+# Method: Recursive traversal that passes current max value
+# Time: O(N), Space: O(H)
+
 class Solution:
     def goodNodes(self, root: TreeNode) -> int:
         m=root.val

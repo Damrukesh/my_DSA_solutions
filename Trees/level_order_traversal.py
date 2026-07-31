@@ -5,6 +5,12 @@
 #         self.left = left
 #         self.right = right
 
+# Problem: Level order traversal of a binary tree
+# Pattern: BFS by level
+# Brute Force: Recursively gather nodes by depth with repeated traversal
+# Method: Use a queue to process nodes level-by-level
+# Time: O(N), Space: O(N)
+
 class Solution:
     def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
         if not root:

@@ -4,6 +4,13 @@
 #         self.val = val
 #         self.left = left
 #         self.right = right
+
+# Problem: Maximum path sum in a binary tree
+# Pattern: DFS with max path propagation
+# Brute Force: Evaluate all paths explicitly
+# Method: Recursively compute max single-branch sum and update global max
+# Time: O(N), Space: O(H)
+
 class Solution:
     def maxPathSum(self, root: Optional[TreeNode]) -> int:
         self.ans=float('-inf')
