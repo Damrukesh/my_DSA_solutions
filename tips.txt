@@ -9,7 +9,8 @@ ITS EASY ! EASY ! just calmly figure out the logic and stay consisten everyday
 
 -----DP--------
 1. initialize array and add an extra dp[n] first
-2. start the operation from the last where the choice is valid using the base cases
-
+2. start the operation from the last where the choice is valid using the base cases. Bottom up
+3. in 2d dp watch out the row col bounds inside the logic 
+4. top down can use dfs recursion , bottom up a single array is fine 
 ----TREES----
 1.dont forget to call the recursion in the main problem 
